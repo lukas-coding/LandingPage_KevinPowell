@@ -17,10 +17,18 @@ img {
     display: block;
 }
 
+section {
+    padding: 7em 0;
+}
+
 .container {
     width: 85%;
     max-width: 65em;
     margin: 0 auto;
+}
+
+.spacing>*+* {
+    margin-top: var(--spacer, 2rem);
 }
 
 .btn {
@@ -51,7 +59,12 @@ img {
     text-transform: uppercase;
 }
 
-.section-title {}
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw +1rem), 4rem);
+    line-height: 1;
+    color: #17353d;
+}
 
 .hero {
     color: white;
@@ -62,6 +75,9 @@ img {
     @supports (background-blend-mode: multiply) {
         background: url(../img/shoe-3.png),
             radial-gradient(#444, #111);
-        background-blend-mode: multiply
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
